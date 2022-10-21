@@ -50,5 +50,7 @@ async def checker(client, message):
                  await client.ban_chat_member(chat_, id_)
                  await asyncio.sleep(35)
                  await client.unban_chat_member(chat_, id_)
+             except:
+                 pass
          else:
               await message.reply(f"{mention} Joined!\nCombot & username check passed"
