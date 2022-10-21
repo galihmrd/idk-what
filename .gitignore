@@ -1,0 +1,5 @@
+__pycache__
+*.session
+*:memory*
+downloads
+config.py

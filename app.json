@@ -1,0 +1,29 @@
+{
+    "name": "Pdf bot",
+    "description": "Convert image to pdf",
+    "keywords": ["bot", "telegram"],
+    "repository": "https://github.com/galihmrd/Group-calls-video",
+    "stack": "container",
+    "env": {
+        "BOT_TOKEN": {
+            "description": "Your Bot token",
+            "required": true
+        },
+        "API_ID": {
+            "description": "Your Telegram API ID",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "Your Telegram API HASH",
+            "required": true
+	},
+	"GIT_TOKEN": {
+	    "description": "ID of bot log",
+	    "required": true
+        },
+        "PATH_REPO": {
+            "description": "path",
+            "required": true
+        }
+    }
+}
