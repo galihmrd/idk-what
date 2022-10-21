@@ -1,6 +1,6 @@
-import requests
 import asyncio
 
+import requests
 from pyrogram import Client, filters
 
 
@@ -37,20 +37,20 @@ async def checker(client, message):
             except Exception as e:
                 await message.reply(e)
     else:
-         print(username)
-         if status == True:
-             try:
-                 result = req.json()["result"]
-                 reason = f"https://cas.chat/query?u={id_}"
-                 offenses = result["offenses"]
-                 time_added = result["time_added"]
-                 await message.reply(
-                     f"**COMBOT ANTI SPAM**\n\n**User:** {mention} kicked!\n**ID:** `{id_}`\n**Reason:** [Link]({reason})\n**Time added:** {time_added}"
-                 )
-                 await client.ban_chat_member(chat_, id_)
-                 await asyncio.sleep(35)
-                 await client.unban_chat_member(chat_, id_)
-             except:
-                 pass
-         else:
-              await message.reply(f"{mention} Joined!\nCombot & username check passed")
+        print(username)
+        if status == True:
+            try:
+                result = req.json()["result"]
+                reason = f"https://cas.chat/query?u={id_}"
+                offenses = result["offenses"]
+                time_added = result["time_added"]
+                await message.reply(
+                    f"**COMBOT ANTI SPAM**\n\n**User:** {mention} kicked!\n**ID:** `{id_}`\n**Reason:** [Link]({reason})\n**Time added:** {time_added}"
+                )
+                await client.ban_chat_member(chat_, id_)
+                await asyncio.sleep(35)
+                await client.unban_chat_member(chat_, id_)
+            except:
+                pass
+        else:
+            await message.reply(f"{mention} Joined!\nCombot & username check passed")
