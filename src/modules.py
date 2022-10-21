@@ -53,4 +53,4 @@ async def checker(client, message):
              except:
                  pass
          else:
-              await message.reply(f"{mention} Joined!\nCombot & username check passed"
+              await message.reply(f"{mention} Joined!\nCombot & username check passed")
