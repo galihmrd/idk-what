@@ -55,8 +55,8 @@ async def checker(client, message):
 
 async def kick_member(id, chat_id):
     try:
-       await client.ban_chat_member(chat_id, id)
-       await asyncio.sleep(30)
-       await client.unban_chat_member(chat_id, id)
+        await client.ban_chat_member(chat_id, id)
+        await asyncio.sleep(30)
+        await client.unban_chat_member(chat_id, id)
     except:
-       pass
+        pass
